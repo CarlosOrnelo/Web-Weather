@@ -1,0 +1,48 @@
+$component-name: 'l-header';
+
+.#{$component-name} {
+    &__home {
+        grid-area: header;
+        font-family: 'Lato', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 5%;
+
+        &__left {
+            display: flex;
+
+            img {
+                width: 92px;
+                height: 75px;
+                @include breakpoint(minimum-max) {
+                    width: 50px;
+                    height: 50px;
+                };
+            };
+
+            .search-container {
+                .search-bar {
+                    width: 90%;
+    
+                    input {
+                        @include breakpoint(minimum-max) {
+                            width: 100%;
+                        };
+                    };
+                };
+            };
+        };
+
+        &__right {
+
+            display: flex;
+            justify-content: flex-end;
+
+            .toggle-wrapper {
+                display: flex;
+            };
+        }
+        
+    };
+};

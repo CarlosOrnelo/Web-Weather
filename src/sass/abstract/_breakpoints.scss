@@ -1,0 +1,30 @@
+
+@mixin breakpoint($point) {
+    
+    @if $point == minimum-min {
+        @media (max-width: 26.5625rem) { // 425px
+            @content;
+        }
+    };
+    @if $point == minimum-max {
+        @media (max-width: 48rem) { // 768px
+            @content;
+        }
+    };
+    @if $point == medium-max {
+        @media (max-width: 64rem) { // 1024px
+            @content;
+        }
+    };
+    @if $point == medium-large-max {
+        @media (max-width: 90rem) { // 1440px
+            @content;
+        }
+    };
+    @if $point == maximum-min {
+        @media (min-width: 90.0625rem) { // 1441px
+            @content;
+        }
+    };
+
+}

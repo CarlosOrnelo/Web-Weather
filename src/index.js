@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import './sass/style.css';
+import 'react-toastify/dist/ReactToastify.css';
+import Home from './routes/home';
 import reportWebVitals from './reportWebVitals';
+import { toast, ToastContainer } from 'react-toastify';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router >
+      <Switch>
+        <Route path='/home' component={Home} />
+        <Redirect from='/' to='/home' component={Home} />
+      </Switch>
+    </Router>
+    <ToastContainer />
   </React.StrictMode>,
   document.getElementById('root')
 );

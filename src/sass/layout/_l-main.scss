@@ -1,0 +1,115 @@
+$component-name: 'l-main';
+
+.#{$component-name} {
+    &__home {
+        grid-area: main;
+        font-family: 'Lato', sans-serif;
+        
+        .weather-container {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+
+            .location-container {
+
+                text-align: center;
+
+                @include breakpoint(maximum-min) {
+                    margin-left: 5%;
+                    text-align: left
+                };
+            }
+            
+            .cards-wrapper {
+
+                display: flex;
+
+                .change-cards-reverse {
+                    transform: rotate(180deg);
+                    width: 5%;
+                    max-width: 20px;
+                    opacity: 0.5;
+                    @include breakpoint(minimum-max) {
+                        display: none;
+                    };
+                    @include breakpoint(minimum-min) {
+                        display: none;
+                    }; 
+
+                    &:hover {
+                        opacity: 1;
+                        transition: 0.4s
+                    };
+                };
+
+                .change-cards {
+                    max-width: 20px;
+                    width: 5%;
+                    opacity: 0.5;
+                    @include breakpoint(minimum-max) {
+                        display: none;
+                    };
+                    @include breakpoint(minimum-min) {
+                        display: none;
+                    }; 
+                    &:hover {
+                        opacity: 1;
+                        transition: 0.4s
+                    };
+                };
+
+                .cards-container {
+                    display: flex;
+                    padding: 0;
+                    width: 100%;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+                    -webkit-overflow-scrolling: touch;
+                    scroll-behavior: smooth;
+                    margin-left: auto;
+                    margin-right: auto; 
+
+                    &::-webkit-scrollbar {
+                        display: none
+                    };
+                    
+                    .card-informations {
+                        flex: none;
+                        list-style-type: none;
+                        padding: 0px 5px;
+                        width: 10%;
+                        scroll-snap-align: start;
+                        pointer-events: none;
+                        text-align: center;
+                        
+                        @include breakpoint(maximum-min) {
+                            width: 16.66%;
+                            height: 300px
+                        };
+                        @include breakpoint(medium-large-max) {
+                            width: 20%;
+                            height: 250px
+                        };
+                        @include breakpoint(medium-max) {
+                            width: 25%;
+                        };
+                        @include breakpoint(minimum-max) {
+                            width: 50%;
+                        };
+                        @include breakpoint(minimum-min) {
+                            width: 100%;
+                        };
+                        
+                        .weather-icon {
+                            position: relative;
+                        };
+                        hr {
+                            display: none;
+                        };
+                    };
+                };
+            };
+            
+        };
+    };
+};

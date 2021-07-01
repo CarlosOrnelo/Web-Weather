@@ -1,0 +1,9 @@
+$component-name: 'l-footer';
+
+.#{$component-name} {
+    &__home{
+        grid-area: footer;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+};
