@@ -5,7 +5,9 @@ import './sass/style.css';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from './routes/home';
 import reportWebVitals from './reportWebVitals';
-import { toast, ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import {Helmet} from "react-helmet";
+
 
 ReactDOM.render(
   <React.StrictMode>

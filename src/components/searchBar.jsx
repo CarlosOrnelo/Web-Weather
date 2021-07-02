@@ -1,11 +1,8 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Search } from '../styles/search-style';
 
 
 const SearchBar = ({ showLocation }) => {
-
-    // States
-    const [location, setLocation] = useState();
 
     // Refs
     const searchRef = useRef();
