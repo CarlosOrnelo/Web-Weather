@@ -16,12 +16,11 @@ export const getWeather = async (location) => {
 
     startTime = convertDate(startTime);
     
-    const cors = "https://cors-anywhere.herokuapp.com/";
     const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
     const url = `https://api.tomorrow.io/v4/timelines?location=${location}&fields=temperature,temperatureApparent,cloudCover,precipitationType,precipitationIntensity,windSpeed,windDirection&timesteps=${timeSteps}&startTime=${startTime}&timezone=${timezone}&units=metric&apikey=${apiKey}`
     
     try {
-        const { data } = await http.get(cors + url);
+        const { data } = await http.get(url);
         return data;
     } catch(err) {
         return err

@@ -6,7 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Home from './routes/home';
 import reportWebVitals from './reportWebVitals';
 import { ToastContainer } from 'react-toastify';
-import {Helmet} from "react-helmet";
 
 
 ReactDOM.render(
